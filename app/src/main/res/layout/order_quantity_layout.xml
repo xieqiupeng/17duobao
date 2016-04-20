@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/minus_btn"
+        android:layout_width="36dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/car_minus_selector" />
+
+    <EditText
+        android:id="@+id/goods_quantity_edit"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="1dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/icon_cartcounter"
+        android:gravity="center"
+        android:inputType="numberSigned"
+        android:maxLength="7"
+        android:singleLine="true"
+        android:text="1"
+        android:textColor="@color/colorRed"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/plus_btn"
+        android:layout_width="36dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/car_plus_selector" />
+</LinearLayout>

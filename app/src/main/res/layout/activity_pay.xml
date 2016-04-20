@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zhy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBgColor"
+    android:orientation="vertical">
+
+    <com.zhiri.bear.views.CustomActionBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/colorWhite">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:text="商品合计"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/expanded_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/icon_arrow_down" />
+
+                <TextView
+                    android:id="@+id/pay_all_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@id/expanded_img"
+                    android:gravity="center_vertical"
+                    android:text="21 元"
+                    android:textColor="@color/colorRed"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    style="@style/divider_style"
+                    android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/goods_list_header"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:background="@color/color_notifybkg"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="请确认以下订单明细"
+                android:textColor="@color/colorRed"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/divider_view"
+                style="@style/divider_style"
+                android:background="@color/colorDivider" android:visibility="gone"/>
+
+            <com.zhiri.bear.views.NoScrollListView
+                android:id="@+id/goods_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/colorDivider"
+                android:dividerHeight="1dp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorWhite"
+                android:orientation="vertical">
+
+                <com.zhiri.bear.views.CheckableRelativeLayout
+                    android:id="@+id/balance_pay_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:id="@+id/blanche_pay_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:text="余额支付(余额：0元)"
+                        android:textSize="14sp" />
+
+                    <CheckBox
+                        android:id="@+id/blanche_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/check_box_selector"
+                        android:checked="true" />
+
+                    <TextView
+                        android:id="@+id/blanche_pay_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@id/blanche_checkbox"
+                        android:gravity="center_vertical"
+                        android:text="0.0 元"
+                        android:textColor="@color/colorRed"
+                        android:textSize="14sp" />
+                </com.zhiri.bear.views.CheckableRelativeLayout>
+
+                <ImageView style="@style/divider_style" />
+
+                <com.zhiri.bear.views.CheckableRelativeLayout
+                    android:id="@+id/weixin_pay_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:text="微信支付"
+                        android:textSize="14sp" />
+
+                    <CheckBox
+                        android:id="@+id/weixin_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/cicle_check_box_selector"
+                        android:clickable="false"
+                        android:focusable="false" />
+
+                    <TextView
+                        android:id="@+id/weixin_pay_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@id/weixin_checkbox"
+                        android:gravity="center_vertical"
+                        android:text="0.0 元"
+                        android:textColor="@color/colorRed"
+                        android:textSize="14sp" />
+                </com.zhiri.bear.views.CheckableRelativeLayout>
+
+                <ImageView
+                    style="@style/divider_style"
+                    android:layout_marginLeft="10dp" />
+
+                <com.zhiri.bear.views.CheckableRelativeLayout
+                    android:id="@+id/zfb_pay_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:text="支付宝"
+                        android:textSize="14sp" />
+
+                    <CheckBox
+                        android:id="@+id/zfb_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/cicle_check_box_selector"
+                        android:checked="false"
+                        android:clickable="false"
+                        android:focusable="false" />
+
+                    <TextView
+                        android:id="@+id/zfb_pay_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@id/zfb_checkbox"
+                        android:gravity="center_vertical"
+                        android:text="0.0 元"
+                        android:textColor="@color/colorRed"
+                        android:textSize="14sp" />
+                </com.zhiri.bear.views.CheckableRelativeLayout>
+
+                <ImageView style="@style/divider_style" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/next_btn"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_red_shape"
+                android:text="确认支付"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

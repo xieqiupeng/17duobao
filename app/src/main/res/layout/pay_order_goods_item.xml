@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_notifybkg"
+    android:orientation="horizontal"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp">
+
+    <TextView
+        android:id="@+id/goods_name"
+        android:layout_width="0dp"
+        android:layout_height="28dp"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="三星XXXXX电视"
+        android:textColor="@color/color_light_Black"
+        android:textSize="11sp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/goods_count"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_marginLeft="5dp"
+        android:gravity="center_vertical"
+        android:text="20"
+        android:textColor="@color/colorRed"
+        android:textSize="11sp"
+        android:visibility="visible" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:gravity="center_vertical"
+        android:text=" 人次"
+        android:textColor="@color/color_light_Black"
+        android:textSize="11sp"
+        android:visibility="visible" />
+</LinearLayout>

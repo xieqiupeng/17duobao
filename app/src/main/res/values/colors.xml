@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/colorRed</color>
+    <color name="colorPrimaryDark">@color/colorRed</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="colorRed">#d0021b</color>
+    <color name="colorDivider">#D1D1D1</color>
+    <color name="color_light_Black">#4A4A4A</color>
+    <color name="color_light_Black_2">#747474</color>
+    <color name="colorTabTxtColor">#767676</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBgColor">#F1EEEC</color>
+    <color name="colorBlue">#003eff</color>
+    <color name="colorYellow">#F5A623</color>
+    <color name="color_black">#000000</color>
+    <color name="color_profile_header">#661313</color>
+    <color name="color_actionbar">#FBFAF9</color>
+    <color name="color_notifybkg">#fff9f1</color>
+    <color name="color_dark_red">#A60115</color>
+    <color name="color_tran">#00FFFFFF</color>
+</resources>

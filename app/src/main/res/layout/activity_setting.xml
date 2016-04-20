@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBgColor"
+    android:orientation="vertical">
+
+    <com.zhiri.bear.views.CustomActionBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <ImageView style="@style/divider_style" />
+
+        <TextView
+            android:id="@+id/profile_setting_item"
+            style="@style/seting_item_txt_style"
+            android:text="个人信息设置" />
+
+        <ImageView style="@style/profile.divider_style" />
+
+        <TextView
+            android:id="@+id/common_questions_item"
+            style="@style/seting_item_txt_style"
+            android:text="常见问题" />
+
+        <ImageView style="@style/divider_style" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <ImageView style="@style/divider_style" />
+
+        <RelativeLayout
+            android:id="@+id/version_info_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/seting_item_txt2_style"
+                android:text="版本信息" />
+
+            <TextView
+                android:id="@+id/version_code_txt"
+                style="@style/seting_item_txt2_style"
+                android:layout_alignParentRight="true"
+                android:text="v4.4.2" />
+        </RelativeLayout>
+
+
+        <ImageView style="@style/profile.divider_style" />
+
+        <RelativeLayout
+            android:id="@+id/delete_cache_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/seting_item_txt2_style"
+                android:text="清除缓存" />
+
+            <TextView
+                android:id="@+id/cache_size_txt"
+                style="@style/seting_item_txt2_style"
+                android:layout_alignParentRight="true"
+                android:text="11.2MB" />
+        </RelativeLayout>
+
+        <ImageView style="@style/divider_style" />
+    </LinearLayout>
+
+    <ImageView
+        style="@style/divider_style"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:id="@+id/exit_login"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/colorWhite"
+        android:text="退出帐号"
+        android:textColor="@color/color_light_Black"
+        android:textSize="16sp" />
+
+    <ImageView style="@style/divider_style" />
+</LinearLayout>

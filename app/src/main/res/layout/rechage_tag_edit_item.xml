@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+    <EditText
+        android:id="@+id/item_name"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:gravity="center"
+        android:hint="其他金额"
+        android:inputType="numberSigned"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="@color/colorRed"
+        android:textColorHint="@color/colorDivider"
+        android:textSize="14sp">
+
+    </EditText>
+</LinearLayout>

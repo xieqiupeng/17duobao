@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:paddingLeft="10dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/hot_name"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:background="@drawable/button_white_shape"
+        android:gravity="center"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="索尼"
+        android:textColor="@color/colorTabTxtColor"
+        android:textSize="12sp" />
+</LinearLayout>

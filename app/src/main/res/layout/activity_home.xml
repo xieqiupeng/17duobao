@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBgColor"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".ui.home.HomeActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <fragment
+            android:id="@+id/home_profile_fragment"
+            android:name="com.zhiri.bear.ui.home.ProfileFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/fragment_profile_layout" />
+
+        <fragment
+            android:id="@+id/home_car_list_fragment"
+            android:name="com.zhiri.bear.ui.home.ShoppingCartListFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/fragment_buy_list_layout" />
+
+        <fragment
+            android:id="@+id/home_show_fragment"
+            android:name="com.zhiri.bear.ui.home.ShowOrderFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/fragment_show_order_layout" />
+
+        <fragment
+            android:id="@+id/home_new_fragment"
+            android:name="com.zhiri.bear.ui.home.NewMessageFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/fragment_buy_list_layout" />
+
+        <fragment
+            android:id="@+id/home_grab_fragment"
+            android:name="com.zhiri.bear.ui.home.GrabFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/fragment_grab_layout" />
+    </FrameLayout>
+
+    <ImageView style="@style/divider_style" />
+
+    <com.zhiri.bear.views.CustomTabContainer
+        android:id="@+id/tabContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_actionbar"
+        android:minHeight="50dp" />
+</LinearLayout>

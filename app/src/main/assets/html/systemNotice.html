@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<!--<link rel="stylesheet" type="text/css" href=""/>-->
+		<style type="text/css">
+			body{
+				margin: 0px;
+				-webkit-overflow-scrolling: touch;
+			}
+			.wrap{
+				padding: 0px 15px;
+				padding-top: 10px;
+			}
+			.wrap h1{
+				text-align: center;
+				font-size: 16px;
+				margin: 0px;
+				line-height: 40px;
+			}
+			.systime{
+				font-size: 12px;
+				color: rgb(74,74,74);
+				text-align: center;
+				margin-bottom: 20px;
+			}
+			.item{
+				margin-bottom: 20px;
+			}
+			.item p{
+				margin: 0px;
+				line-height: 20px;
+				font-size: 12px;
+			}
+			.item p:first-child{
+				font-size: 14px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="textBox" class="wrap">
+			
+		</div>
+		<script type="text/javascript">
+//			var json = [{"content":"\u003cp\u003etttttttt\u003c/p\u003e","dateTime":"2016-04-07 05:19:00","title":"5rttttt","id":3}];
+//			getNoticeArray(json);
+			function getNoticeArray (data){
+				var html = '';
+				for(var i = 0; i < data.length; i++){
+					html += '<h1>'+ data[i].title +'</h1>'+
+							'<div class="systime">'+
+								data[i].dateTime+
+							'</div>'+
+							'<div class="item">'+
+								'<p class="content">'+
+									data[i].content +
+								'</p>'+
+							'</div>';
+				}
+				document.getElementById('textBox').innerHTML = html;
+			}
+		</script>
+	</body>
+</html>

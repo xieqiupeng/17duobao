@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBgColor"
+    android:orientation="vertical">
+
+    <com.zhiri.bear.views.CustomActionBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:id="@+id/mRecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="您暂时没有收到任何通知"
+        android:id="@+id/empty_txt_msg"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:textColor="#767676"/>
+
+</LinearLayout>

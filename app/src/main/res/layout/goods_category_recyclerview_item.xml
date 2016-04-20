@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <ImageView
+        android:id="@+id/goods_img"
+        android:layout_width="86dp"
+        android:layout_height="72dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="25dp" />
+
+    <ImageView
+        android:id="@+id/goods_mark"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@mipmap/ic_ten_area" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/goods_img"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/goods_img"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/goods_name"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:gravity="center_vertical|bottom"
+                android:minHeight="36dp"
+                android:text="测试测试测试测试测试测试测试测试"
+                android:textColor="@color/color_light_Black"
+                android:textSize="12sp" />
+
+            <ProgressBar
+                android:id="@+id/goods_progressbar"
+                style="@style/mProgress_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:progress="1" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/count_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="总需"
+                    android:textColor="@color/colorTabTxtColor"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/goods_count_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toRightOf="@id/count_label"
+                    android:text=""
+                    android:textColor="@color/colorTabTxtColor"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/goods_surplus_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp"
+                    android:text=""
+                    android:textColor="@color/colorBlue"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/goods_surplus_txt"
+                    android:text="剩余"
+                    android:textColor="@color/colorTabTxtColor"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/add_buy_car_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/add_car_btn_selector"
+            android:gravity="center"
+            android:minWidth="56dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="加入清单"
+            android:textColor="@drawable/add_car_text_color"
+            android:textSize="11sp" />
+    </LinearLayout>
+</RelativeLayout>

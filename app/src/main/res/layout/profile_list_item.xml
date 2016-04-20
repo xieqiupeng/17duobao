@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/divider_view"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/winning_record_item"
+        style="@style/profile_item_container_style">
+
+        <ImageView
+            android:id="@+id/winning_record_iv"
+            style="@style/profile_item_image_style"
+            android:src="@mipmap/ic_prize_record" />
+
+        <TextView
+            android:id="@+id/item_name"
+            style="@style/profile_textview_style"
+            android:layout_toRightOf="@id/winning_record_iv"
+            android:text="中奖记录" />
+
+        <ImageView
+            android:id="@+id/item_nor_divider"
+            style="@style/profile.divider_style"
+            android:layout_toRightOf="@id/winning_record_iv" />
+    </RelativeLayout>
+</LinearLayout>

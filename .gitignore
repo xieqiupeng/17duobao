@@ -1,0 +1,8 @@
+.gradle/
+.idea/
+.svn/
+trunk.iml
+yqdb.iml
+build/
+bear.iml
+gradle/

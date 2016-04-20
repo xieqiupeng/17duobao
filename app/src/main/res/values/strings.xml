@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">一起夺宝</string>
+    <string name="action_settings">Settings</string>
+    <string name="home_tab_profile_lable">我的</string>
+    <string name="home_tab_list_lable">清单</string>
+    <string name="home_tab_show_lable">晒单</string>
+    <string name="home_tab_announced_lable">最新揭晓</string>
+    <string name="home_tab_grab_lable">夺宝</string>
+    <string name="edit_label">编辑</string>
+    <string name="show_order_label">晒单分享</string>
+
+    <string name="cube_views_load_more_click_to_load_more">点击加载更多</string>
+    <string name="cube_views_load_more_loaded_no_more">全部数据加载完毕</string>
+    <string name="cube_views_load_more_loaded_empty">数据为空</string>
+    <string name="cube_views_load_more_error">加载失败,点击重试</string>
+    <string name="cube_views_load_more_loading">加载中...</string>
+</resources>

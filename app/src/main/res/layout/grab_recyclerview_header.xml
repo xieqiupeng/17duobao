@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <com.zhiri.bear.widgets.rollviewpager.RollPagerView
+        android:id="@+id/grab_banner_pager"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/banner_height"
+        app:rollviewpager_play_delay="5000" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/goods_category_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/colorWhite"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
+
+    <ImageView
+        style="@style/divider_style"
+        android:background="@color/colorBgColor" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorWhite"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_newwinneralert" />
+
+        <com.zhiri.bear.views.VerticalBannerView
+            android:id="@+id/vertical_banner_view"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            app:animDuration="900"
+            app:gap="3000" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/colorBgColor" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/colorWhite"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:weightSum="4">
+
+        <com.zhiri.bear.views.CustomTextView
+            android:id="@+id/hot_item"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="人气"
+            android:textColor="@drawable/tab_txt_color"
+            android:textSize="14sp" />
+
+        <com.zhiri.bear.views.CustomTextView
+            android:id="@+id/new_item"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="最新"
+            android:textColor="@drawable/tab_txt_color"
+            android:textSize="14sp" />
+
+        <com.zhiri.bear.views.CustomTextView
+            android:id="@+id/ten_item"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="十元专区"
+            android:textColor="@drawable/tab_txt_color"
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:id="@+id/all_root_item"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <com.zhiri.bear.views.CustomTextView
+                android:id="@+id/all_item"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:drawablePadding="5dp"
+                android:drawableRight="@mipmap/icon_switch_desend"
+                android:gravity="center"
+                android:text="总需人次"
+                android:textColor="@drawable/tab_txt_color"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </RadioGroup>
+</LinearLayout>

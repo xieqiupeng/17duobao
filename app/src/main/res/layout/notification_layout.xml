@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/content_ly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginRight="38dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/mNotificationTitle"
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:gravity="center"
+            android:text="通知"
+            android:textColor="@color/color_black"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/mNotification_time"
+            android:layout_width="match_parent"
+            android:layout_height="17dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="2016-12-12 21:00"
+            android:textColor="@color/colorTabTxtColor"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <WebView
+            android:id="@+id/mCustomWebView"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:background="@color/colorWhite"
+            android:padding="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="73dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/sure_btn"
+                android:layout_width="148dp"
+                android:layout_height="40dp"
+                android:background="@drawable/button_red_shape"
+                android:gravity="center"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="确定"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

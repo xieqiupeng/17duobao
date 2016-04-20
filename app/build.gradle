@@ -1,0 +1,63 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        debug {
+            keyAlias 'bear'
+            keyPassword '123456'
+            storeFile file('./bear.jks')
+            storePassword '123456'
+        }
+        release {
+            keyAlias 'bear'
+            keyPassword '123456'
+            storeFile file('./bear.jks')
+            storePassword '123456'
+        }
+    }
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+    defaultConfig {
+        applicationId "com.zhiri.bear"
+        minSdkVersion 14
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+        wandoujia {}
+        baidu {}
+        c360 {}
+        xiaomi {}
+        huawei{}
+        anzhi{}
+        yingyongbao{}
+        sogoumobi{}
+        website{}
+        productFlavors.all { flavor ->
+            flavor.manifestPlaceholders = [CHANNEL_VALUE: name]
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.2.0'
+    compile 'com.android.support:design:23.2.0'
+    compile 'com.orhanobut:logger:1.11'
+    compile 'com.squareup.retrofit2:retrofit:2.0.0-beta3'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta3'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.jcodecraeer:xrecyclerview:1.2.6+'
+    compile 'cn.pedant.safewebviewbridge:library:1.4'
+    compile 'de.greenrobot:eventbus:3.0.0-beta1'
+    compile 'com.github.iwgang:countdownview:1.2'
+}
